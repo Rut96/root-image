@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@500&family=Parkinsans:wght@300..800&display=swap');
+.Layout {
+    position: relative;
+    min-height: 100vh;
+    padding: 0 1.5rem;
+    /* background-image: url('../../../assets/images/back.png'); */
+    background-image: url('../../../assets/images/back4.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fffffd;
+    /* background-color: #ffede1; */
+}
+
+.layout-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}

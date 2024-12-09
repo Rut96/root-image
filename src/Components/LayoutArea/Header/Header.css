@@ -1,0 +1,140 @@
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    font-family: "Parkinsans", serif;
+}
+
+.header-content {
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.header-decoration {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 0.4s forwards;
+}
+
+.header-decoration.left {
+    justify-content: flex-end;
+}
+
+.header-decoration.right {
+    justify-content: flex-start;
+}
+
+.decoration-line {
+    height: 2px;
+    width: 100px;
+    background: linear-gradient(90deg, transparent, #d3a2c0, transparent);
+}
+
+.left .decoration-line {
+    margin-left: 1rem;
+}
+
+.right .decoration-line {
+    margin-right: 1rem;
+}
+
+.icon {
+    color: #d3a2c0;
+}
+
+.icon.camera {
+    animation: bounce 2s infinite;
+}
+
+.icon.sparkles {
+    animation: sparkle 3s infinite;
+}
+
+.icon.palette {
+    animation: rotate 4s infinite linear;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-decoration {
+        display: none;
+    }
+
+    .main-header {
+        padding: 1.5rem 1rem;
+    }
+
+    .title-wrapper {
+        gap: 0.75rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+}
